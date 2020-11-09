@@ -25,7 +25,7 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  // BLANK[1]
+  return isLeapYear(y) ? 366 : 365;// BLAN1qwe
 }
 
 function daysInMonth(y, m){
@@ -50,7 +50,31 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+  if(dayOfYear(y) % 7 == 0){
+    return 2;
+  }
+  else if(dayOfYear(y) % 7 == 1){
+    return 3;
+  }
+  else if(dayOfYear(y) % 7 == 2){
+    return 4;
+  }
+  else if(dayOfYear(y) % 7 == 3){
+    return 5;
+  }
+  else if(dayOfYear(y) % 7 == 4){
+    return 6;
+  }
+  else if(dayOfYear(y) % 7 == 5){
+    return 0;
+  }
+  else{
+    return 1;
+  }
 }
+
+console.log(dayOfWeek(1981, 7, 17));
+console.log(dayOfWeek(2001, 6, 25));
 
 function dayOfWeekAsString(dow){
   const a = ["日", "月", "火", "水", "木", "金", "土", "日"];
