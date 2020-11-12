@@ -48,6 +48,8 @@ function dayOfYear(y, m, d){
   return count + d;
 }
 
+
+
 function dayOfWeek(y, m, d){
   // BLANK[2]
   if(dayOfYear(y) % 7 == 0){
@@ -74,7 +76,7 @@ function dayOfWeek(y, m, d){
 }
 
 console.log(dayOfWeek(1981, 7, 17));
-console.log(dayOfWeek(2001, 6, 25));
+console.log(dayOfWeek(1981, 7, 18));
 
 function dayOfWeekAsString(dow){
   const a = ["日", "月", "火", "水", "木", "金", "土", "日"];
